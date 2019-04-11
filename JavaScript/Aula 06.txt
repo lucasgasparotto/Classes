@@ -1,0 +1,37 @@
+function soma(num1, num2){
+	var r = parseInt(num1) + parseInt(num2);
+  alert('A soma é: ' + r);
+}
+
+function sub(num1, num2){
+	var r = num1 - num2;
+  alert('A subtração é: ' + r);
+}
+
+var num1 = prompt('Digite um Valor:');
+alert('Que tipo de operação você deseja realizar?');
+alert('Soma ou Subtração?')
+var oper = prompt("Operação:")
+var num2 = prompt('Digite um Valor:');
+
+switch(oper){
+
+	case 'soma':
+  	soma(num1, num2);
+  break;
+  
+  case 'Soma':
+  	soma(num1, num2);
+  break;
+  
+  case 'subtração':
+  	sub(num1, num2);
+    break;
+  
+  case 'Subtração':
+  	sub(num1, num2);
+    break;
+    
+  default:
+  	alert('Escolha uma opção válida');
+}

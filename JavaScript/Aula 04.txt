@@ -1,0 +1,40 @@
+var nome = prompt('Qual seu nome?');
+var altura = prompt('Qual sua altura em centímetros?');
+var peso = prompt('Qual seu peso?');
+
+parseFloat(altura, peso);
+
+var altura = altura / 100;
+var M = peso / (altura * altura);
+
+var classificacao;
+
+if(M < 16){
+	classificacao = ('Baixo peso - Muito Grave');
+  
+} else if(M >= 16 && M <= 16.99){
+	classificacao = ('Baixo peso - Grave');
+  
+} else if(M >= 17 && M <= 18.49){
+	classificacao = ('Baixo peso');
+  
+} else if(M >= 18.50 && M <= 24.99){
+	classificacao = ('Peso normal');
+  
+} else if(M >= 25 && M <= 29.99){
+	classificacao = ('Sobrepeso');
+  
+} else if(M >= 30 && M <= 34.99){
+	classificacao = ('Obesidade Grau I');
+  
+} else if(M >= 35 && M <= 39.99){
+	classificacao = ('Obesidade Grau II');
+  
+} else if(M >= 40){
+	classificacao = ('Obesidade Grau III');
+  
+} else {
+	classificacao = ('Entre com um valor válido');
+}
+
+alert(nome + ', você possui índice de massa corporal igual a '+ M + ', sendo classificado como: ' + classificacao);
